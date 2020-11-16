@@ -46,7 +46,7 @@ while True:
     next_y = y + dy[direction]
     # 회전한 이후 정면에 가보지 않은 칸이 존재하는 경우 이동
     if maps[next_x][next_y] == 0 and characters_visit_map[next_x][next_y] == 0:
-        maps[next_x][next_y] = 1 # 맵 이동
+        characters_visit_map[next_x][next_y] = 1 # 맵 이동
         x = next_x
         y = next_y
         # 방문한 칸 카운트
